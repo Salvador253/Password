@@ -36,12 +36,12 @@ namespace LePassword
 
                 if (reader.Read())
                 {
-                    MessageBox.Show("Bienvenido al sistema de waldos");
+                    MessageBox.Show("Sea usted bienvenido.");
                     databaseConnection.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Ingreso fallido intente nuevamente");
+                    MessageBox.Show("Usuario o contraseña incorrecta.");
                 }
             }
             catch(Exception ex)
@@ -82,6 +82,11 @@ namespace LePassword
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

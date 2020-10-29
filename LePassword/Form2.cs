@@ -31,7 +31,7 @@ namespace LePassword
             {
                 databaseConnection.Open();
                 MySqlDataReader reader = commandDatabase.ExecuteReader();
-                MessageBox.Show("Usuario Registrado");
+                MessageBox.Show("Registro exitoso.");
                 databaseConnection.Close();
                 textBox1.Text = "";
                 textBox2.Text = "";
