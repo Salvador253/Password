@@ -65,7 +65,8 @@ namespace LePassword
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Form2 registrar = new Form2();
+            registrar.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -74,6 +75,11 @@ namespace LePassword
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
