@@ -20,8 +20,8 @@ namespace LePassword
 
         private void registro()
         {
-            string connect = "datasource=localhost;post=3306;username=root;password=;database=sistema";
-            string query = "INSERT INTO user(`id`,`username`,`password`) VALUES (NULL, '" + textBox1.Text + "','" + textBox2.Text + "' )";
+            string connect = "datasource=localhost;port=3306;username=root;password=;database=leincriptation";
+            string query = "INSERT INTO user(`id`,`username`,`password`) VALUES (NULL, '" + textBox1.Text + "',SHA1('" + textBox2.Text + "' ))";
             MySqlConnection databaseConnection = new MySqlConnection(connect);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -45,6 +45,21 @@ namespace LePassword
         private void button2_Click(object sender, EventArgs e)
         {
             registro();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

@@ -20,8 +20,8 @@ namespace LePassword
 
         private void Registrar()
         {
-            string connect = "datasource=localhost;post=3306;username=root;password=;database=sistema";
-            string query = "SELECT * from user where username = '" + textBox1 + "' AND password = '" + textBox2 + "' ";
+            string connect = "datasource=localhost;port=3306;username=root;password=;database=leincriptation";
+            string query = "SELECT * from user where username = '" + textBox1.Text + "' AND password = SHA1 ('"+ textBox2.Text + "'))";
             MySqlConnection databaseConnection = new MySqlConnection(connect);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -31,6 +31,8 @@ namespace LePassword
             {
                 databaseConnection.Open();
                 reader = commandDatabase.ExecuteReader();
+                textBox1.Text = "";
+                textBox2.Text = "";
 
                 if (reader.Read())
                 {
